@@ -9,21 +9,11 @@
 </head>
 
 <body>
-    <header style="background-color: lightgray;">
-        <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'foods' %}">Menu</a>
-        <a href="{% url 'about' %}">About</a>
-    </header>
-    <h1>Home</h1>
-    <p>Django Test</p>
-    <footer style="background-color: lightgray;">
-        <h5>follow me</h5>
-        <p>
-            <a>Facebook</a>
-            <a>Twitter</a>
-            <a>Instagram</a>
-        </p>
-    </footer>
+    {% include 'app_general/components/header.html' %}
+    <div>
+        <h1>Home</h1>
+        <p>Django Test</p>
+    </div>
 </body>
-
+{% include 'app_general/components/footer.html' %}
 </html>
