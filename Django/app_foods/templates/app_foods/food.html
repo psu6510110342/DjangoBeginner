@@ -1,29 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'app_general/components/base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
-</head>
+{% block title %}
+Food-id = {{food_id}}
+{% endblock %}
 
-<body>
-    <header style="background-color: lightgray;">
-        <a>Home</a>
-        <a>Menu</a>
-        <a>About</a>
-    </header>
+{% block content %}
+<div>
     <h2>Food-id = {{food_id}}</h2>
     <p>Django Test</p>
-    <footer style="background-color: lightgray;">
-        <h5>follow me</h5>
-        <p>
-            <a>Facebook</a>
-            <a>Twitter</a>
-            <a>Instagram</a>
-        </p>
-    </footer>
-</body>
-
-</html>
+</div>
+{% endblock %}
