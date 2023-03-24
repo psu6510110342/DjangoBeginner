@@ -1,7 +1,7 @@
 {% extends 'app_general/components/base.html' %}
 
 {% block title %}
-Food-id = {{food_id}}
+{{food.title}}
 {% endblock %}
 
 {% block content %}
@@ -12,6 +12,7 @@ Food-id = {{food_id}}
     {% if food.is_premium %}
     <p>premium</p>
     {% endif %}
+    <p>descriptions...</p>
 </div>
 {% else %}
 <p>empty</p>
