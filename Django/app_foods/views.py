@@ -15,4 +15,6 @@ def foods(request):
 
 
 def food(request, food_id):
-    return render(request, 'app_foods/food.html', context={'food_id': food_id})
+    one_food = [f for f in all_food if f['id'] == food_id][0]
+    context = {'food': one_food}
+    return render(request, 'app_foods/food.html', context)

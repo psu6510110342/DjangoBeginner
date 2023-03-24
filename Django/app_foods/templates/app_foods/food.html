@@ -5,8 +5,15 @@ Food-id = {{food_id}}
 {% endblock %}
 
 {% block content %}
+{% if food is not None %}
 <div>
-    <h2>Food-id = {{food_id}}</h2>
-    <p>Django Test</p>
+    <h3><a>{{food.title}}</a></h3>
+    <p>{{ food.price }} bath</p>
+    {% if food.is_premium %}
+    <p>premium</p>
+    {% endif %}
 </div>
+{% else %}
+<p>empty</p>
+{% endif %}
 {% endblock %}
