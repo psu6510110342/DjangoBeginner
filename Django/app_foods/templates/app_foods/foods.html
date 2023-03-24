@@ -7,11 +7,15 @@
     <h2>Menu</h2>
     <p>Django Test</p>
     {% for food in foods %}
-    <h3><a href="{% url 'food' food.id %}">{{food.title}}</a></h3>
-    <p>{{ food.price }} bath</p>
-    {% if food.is_premium %}
+    <div style="background-color: rgb(255, 208, 249);">
+        <h3><a href="{% url 'food' food.id %}">{{food.title}}</a></h3>
+        <p>{{ food.price }} bath</p>
+        {% if food.is_premium %}
         <p>premium</p>
-    {% endif %}
+        {% endif %}
+    </div>
+    {% empty %}
+    <p>empty</p>
     {% endfor %}
 </div>
 {% endblock %}
