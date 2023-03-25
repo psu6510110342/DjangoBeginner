@@ -1,9 +1,28 @@
+from datetime import datetime
 from django.shortcuts import render
 
 all_food = [
-    {'id': 1, 'title': 'Chocolate', 'price': 1449, 'is_premium': True},
-    {'id': 2, 'title': 'Red', 'price': 1349, 'is_premium': False},
-    {'id': 3, 'title': 'Bule', 'price': 1349, 'is_premium': False}
+    {
+        'id': 1,
+        'title': 'Chocolate',
+        'price': 1449,
+        'is_premium': True,
+        'promosion_end_at': datetime(2022, 2, 28)
+    },
+    {
+        'id': 2,
+        'title': 'Red',
+        'price': 1349,
+        'is_premium': False,
+        'promosion_end_at': datetime(2022, 2, 15)
+    },
+    {
+        'id': 3,
+        'title': 'Bule',
+        'price': 1349,
+        'is_premium': False,
+        'promosion_end_at': datetime(2022, 2, 15)
+    }
 ]
 
 # Create your views here.

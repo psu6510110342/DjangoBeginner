@@ -13,6 +13,7 @@
         {% if food.is_premium %}
         <p>premium</p>
         {% endif %}
+        <p>{{ food.promosion_end_at|date:'j N Y' }}</p>
     </div>
     {% empty %}
     <p>coming soon</p>
