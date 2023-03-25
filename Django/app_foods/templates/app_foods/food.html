@@ -8,7 +8,7 @@
 {% if food is not None %}
 <div>
     <h3><a>{{food.title}}</a></h3>
-    <p>{{ food.price }} bath</p>
+    <p>{{ food.price|floatformat:'g' }} bath</p>
     {% if food.is_premium %}
     <p>premium</p>
     {% endif %}
