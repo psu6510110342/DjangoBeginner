@@ -1,9 +1,9 @@
 from django.shortcuts import render
 
 all_food = [
-    {'id': 1, 'title': 'Chocolate', 'price': 449, 'is_premium': True},
-    {'id': 2, 'title': 'Red', 'price': 349, 'is_premium': False},
-    {'id': 3, 'title': 'Bule', 'price': 349, 'is_premium': False}
+    {'id': 1, 'title': 'Chocolate', 'price': 1449, 'is_premium': True},
+    {'id': 2, 'title': 'Red', 'price': 1349, 'is_premium': False},
+    {'id': 3, 'title': 'Bule', 'price': 1349, 'is_premium': False}
 ]
 
 # Create your views here.

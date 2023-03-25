@@ -9,7 +9,7 @@
     {% for food in foods %}
     <div style="background-color: rgb(255, 208, 249);">
         <h3><a href="{% url 'food' food.id %}">{{food.title}}</a></h3>
-        <p>{{ food.price }} bath</p>
+        <p>{{ food.price|floatformat:'g' }} bath</p>
         {% if food.is_premium %}
         <p>premium</p>
         {% endif %}
