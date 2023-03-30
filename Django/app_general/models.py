@@ -13,5 +13,4 @@ class Subscription(models.Model):
     email = models.EmailField(max_length=60, unique=True)
     status = models.CharField(max_length=15, choices=STATUS, default='unapproved')
     register_at = models.DateTimeField(auto_now_add=True)
-    food = models.OneToOneField('app_foods.Food', on_delete=models.SET_NULL, null=True)
-    
+    food = models.ForeignKey('app_foods.Food', on_delete=models.SET_NULL, null=True)
