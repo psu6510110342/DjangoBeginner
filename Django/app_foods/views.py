@@ -13,9 +13,9 @@ def foods(request):
 
 def food(request, food_id):
     one_food = None
-    #try:
-    #    one_food = [f for f in all_foods if f['id'] == food_id][0]
-    #except IndexError:
-    #    print('empty')
+    try:
+        one_food = Food.objects.get(id=food_id)
+    except:
+        print('empty')
     context = {'food': one_food}
     return render(request, 'app_foods/food.html', context)

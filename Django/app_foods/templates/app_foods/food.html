@@ -8,11 +8,18 @@
 {% if food is not None %}
 <div>
     <h3><a>{{food.title}}</a></h3>
+    {% if food.special_price is not None %}
+    <p>
+        <span>{{ food.special_price|floatformat:'g' }} bath</span>
+        <del>{{ food.price|floatformat:'g' }} bath</del>
+    </p>
+    {% else %}
     <p>{{ food.price|floatformat:'g' }} bath</p>
+    {% endif %}
     {% if food.is_premium %}
     <p>premium</p>
     {% endif %}
-    <p>descriptions...</p>
+    <p>{{ food.description }}</p>
     <p>{{food.promosion_end_at|date:'j N Y'}}</p>
 </div>
 {% else %}
