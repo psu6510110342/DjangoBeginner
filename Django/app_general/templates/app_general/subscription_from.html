@@ -1,0 +1,26 @@
+{% extends 'app_general/components/base.html' %}
+
+{% block title %}
+Subscription
+{% endblock %}
+
+{% block content %}
+<form action="">
+    <h2>regist</h2>
+    <div>
+        <label>name</label>
+        <input type="text">
+    </div>
+    <div>
+        <label>email</label>
+        <input type="email">
+    </div>
+    <div>
+        {% for food in foods %}
+        <input type="checkbox">
+        <labe>{{ food.title }}</label>
+        {% endfor %}
+    </div>
+    <a href="{% url 'sub_ty' %}">go to menu</a>
+</form>
+{% endblock %}
