@@ -5,22 +5,25 @@ Subscription
 {% endblock %}
 
 {% block content %}
-<form action="">
+<form action="{% url 'subscription' %}" method="post">
+    {% csrf_token %}
     <h2>regist</h2>
-    <div>
+    <div style="margin-bottom: 16px">
         <label>name</label>
-        <input type="text">
+        <input type="text" name="name">
     </div>
-    <div>
+    <div style="margin-bottom: 16px">
         <label>email</label>
-        <input type="email">
+        <input type="email" name="email">
     </div>
-    <div>
+    <div style="margin-bottom: 16px">
         {% for food in foods %}
-        <input type="checkbox">
+        <input type="checkbox" name="food_ids[]" value="{{ food.id }}">
         <labe>{{ food.title }}</label>
         {% endfor %}
     </div>
-    <a href="{% url 'sub_ty' %}">go to menu</a>
+    <div style="margin-bottom: 16px;">
+        <button type="submit">register</button>
+    </div>
 </form>
 {% endblock %}
