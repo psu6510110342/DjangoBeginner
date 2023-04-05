@@ -8,7 +8,24 @@ Subscription
 <form action="{% url 'subscription' %}" method="post">
     {% csrf_token %}
     <h2>regist</h2>
-    {{ form.as_p }}
+    <div style="margin-bottom: 16px;">
+        {{ form.name.label_tag }}
+        {{ form.name }}
+    </div>
+    <div style="margin-bottom: 16px;">
+        {{ form.email.label_tag }}
+        {{ form.email }}
+    </div>
+    <div style="margin-bottom: 16px;">
+        {{ form.food_set.label_tag }}
+        {{ form.food_set }}
+    </div>
+    <div style="margin-bottom: 16px;">
+        <label>
+            {{ form.accepted }}
+            {{ form.accepted.label }}
+        </label>
+    </div>
     <div style="margin-bottom: 16px;">
         <button type="submit">register</button>
     </div>
