@@ -1,4 +1,5 @@
 {% extends 'app_general/components/base.html' %}
+{% load static %}
 
 {% block title %}
 Home
@@ -9,4 +10,19 @@ Home
     <h2>Home</h2>
     <p>Django Test</p>
 </div>
+<section>
+    <h4>descript</h4>
+    <div>
+        <div><img src="{% static 'app_general/home-about-1.jpg' %}" alt=""></div>
+        <p>description...</p>
+    </div>
+    <div>
+        <div><img src="{% static 'app_general/home-about-2.jpg' %}" alt=""></div>
+        <p>description...</p>
+    </div>
+    <div>
+        <div><img src="{% static 'app_general/home-about-3.jpg' %}" alt=""></div>
+        <p>description...</p>
+    </div>
+</section>
 {% endblock %}

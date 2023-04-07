@@ -1,5 +1,9 @@
+{% load static %}
 <header style="background-color: lightgray;">
-    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'home' %}">
+        <img src="{% static 'app_general/logo.png' %}" alt="">
+        <span></span>
+    </a>
     <a href="{% url 'foods' %}">Menu</a>
     <a href="{% url 'about' %}">About</a>
 </header>
