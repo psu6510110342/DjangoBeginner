@@ -1,4 +1,5 @@
 {% extends 'app_general/components/base.html' %}
+{% load static %}
 
 {% block title %}
 {{food.title}}
@@ -8,6 +9,7 @@
 {% if food is not None %}
 <div>
     <h3><a>{{food.title}}</a></h3>
+    <div><img src="{% static food.image %}" alt=""></div>
     {% if food.special_price is not None %}
     <p>
         <span>{{ food.special_price|floatformat:'g' }} bath</span>
