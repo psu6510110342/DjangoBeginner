@@ -36,6 +36,19 @@ html {
     font-weight: 300;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #111111;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-top: 0px;
+    margin-bottom: 16px;
+}
+
 h1 {
     font-size: 32px;
 }
@@ -90,11 +103,24 @@ a {
 }
 
 .site-header-item:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .site-header-brand img {
     display: inline-block;
     height: 30px;
     margin-right: 6px;
-  }
+}
+
+/* Site footer */
+.site-footer {
+    background-color: #eeeeee;
+    text-align: center;
+    padding: 16px;
+}
+
+.site-footer-copyright {
+    font-size: 12px;
+    margin-top: 32px;
+    margin-bottom: 0px;
+}
