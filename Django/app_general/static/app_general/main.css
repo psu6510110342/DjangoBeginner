@@ -124,3 +124,43 @@ a {
     margin-top: 32px;
     margin-bottom: 0px;
 }
+
+/* Homepage */
+.home-landing-section {
+    background-color: #eeeeee;
+    background-image: url('home-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 108px 16px;
+}
+
+.home-landing-text {
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 1);
+    margin-top: 0px;
+    margin-bottom: 24px;
+}
+
+.button {
+    color: white;
+    background-color: #111111;
+    border: none;
+    border-radius: 8px;
+    font-weight: 300;
+    line-height: 1;
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.button-primary {
+    background-color: #0D79F2;
+}
+
+.button-primary:hover {
+    background-color: #085dbd;
+}
+

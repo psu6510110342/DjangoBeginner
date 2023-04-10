@@ -6,10 +6,16 @@ Home
 {% endblock %}
 
 {% block content %}
-<div>
-    <h2>Home</h2>
-    <p>Django Test</p>
-</div>
+<section class="home-landing-section">
+    <div>
+        <h2 class="home-landing-text">Home</h2>
+        <p class="home-landing-text">Django Test</p>
+        <p>
+            <a class="button" href="{% url 'foods' %}">MenuAll</a>
+            <a class="button button-primary" href="{% url 'subscription' %}">Register</a>
+        </p>
+    </div>
+</section>
 <section>
     <h4>descript</h4>
     <div>
