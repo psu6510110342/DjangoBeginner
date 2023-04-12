@@ -16,19 +16,26 @@ Home
         </p>
     </div>
 </section>
-<section>
-    <h4>descript</h4>
-    <div>
-        <div><img src="{% static 'app_general/home-about-1.jpg' %}" alt=""></div>
-        <p>description...</p>
-    </div>
-    <div>
-        <div><img src="{% static 'app_general/home-about-2.jpg' %}" alt=""></div>
-        <p>description...</p>
-    </div>
-    <div>
-        <div><img src="{% static 'app_general/home-about-3.jpg' %}" alt=""></div>
-        <p>description...</p>
+<section class="content-section">
+    <div class="content-container">
+        <h4 class="content-title text-center">descript...</h4>
+        <div class="grid grid-3">
+            <div>
+                <img class="image" src="{% static 'app_general/home-about-1.jpg' %}">
+                <p>description1...</p>
+            </div>
+            <div>
+                <img class="image" src="{% static 'app_general/home-about-2.jpg' %}">
+                <p>description2...</p>
+            </div>
+            <div>
+                <img class="image" src="{% static 'app_general/home-about-3.jpg' %}">
+                <p>description3...</p>
+            </div>
+        </div>
+        <p class="text-center">
+            <a class="button" href="{% url 'about' %}">About</a>
+        </p>
     </div>
 </section>
 {% endblock %}
