@@ -168,6 +168,10 @@ a {
     padding: 64px 16px;
 }
 
+.content-section-single {
+    min-height: calc(100vh - 150px);
+}
+
 .content-container {
     max-width: 1200px;
     margin-left: auto;
