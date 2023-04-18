@@ -6,25 +6,34 @@
 {% endblock %}
 
 {% block content %}
-{% if food is not None %}
-<div>
-    <h3><a>{{food.title}}</a></h3>
-    <div><img src="{% static food.image %}" alt=""></div>
-    {% if food.special_price is not None %}
-    <p>
-        <span>{{ food.special_price|floatformat:'g' }} bath</span>
-        <del>{{ food.price|floatformat:'g' }} bath</del>
-    </p>
-    {% else %}
-    <p>{{ food.price|floatformat:'g' }} bath</p>
-    {% endif %}
-    {% if food.is_premium %}
-    <p>premium</p>
-    {% endif %}
-    <p>{{ food.description }}</p>
-    <p>{{food.promosion_end_at|date:'j N Y'}}</p>
-</div>
-{% else %}
-<p>empty</p>
-{% endif %}
+<section class="content-section">
+    <div class="content-container">
+        {% if food is not None %}
+        <div class="grid grid-2">
+            <img class="image" src="{% static food.image %}" alt="">
+            <div>
+                <h3>{{food.title}}</h3>
+                {% if food.special_price is not None %}
+                <p>
+                    <span>{{ food.special_price|floatformat:'g' }} bath</span>
+                    <del class="text-g">{{ food.price|floatformat:'g' }} bath</del>
+                </p>
+                {% else %}
+                <p>{{ food.price|floatformat:'g' }} bath</p>
+                {% endif %}
+                {% if food.is_premium %}
+                <p>premium</p>
+                {% endif %}
+                <p>{{ food.description }}</p>
+                <p>{{food.promosion_end_at|date:'j N Y'}}</p>
+                <p>
+                    <a class="button button-primary" href="{% url 'foods' %}">MenuAll</a>
+                </p>
+            </div>
+        </div>
+        {% else %}
+        <p>empty</p>
+        {% endif %}
+    </div>
+</section>
 {% endblock %}

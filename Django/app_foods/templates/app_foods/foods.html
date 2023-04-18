@@ -4,29 +4,41 @@
 {% block title %} Menu {% endblock %}
 
 {% block content %}
-<div>
-    <h2>Menu</h2>
-    <p>Django Test</p>
-    {% for food in foods %}
-    <div style="background-color: rgb(255, 208, 249);">
-        <div><img src="{% static food.image %}" alt=""></div>
-        <h3><a href="{% url 'food' food.id %}">{{food.title}}</a></h3>
-        {% if food.special_price is not None %}
-        <p>
-            <span>{{ food.special_price|floatformat:'g' }} bath</span>
-            <del>{{ food.price|floatformat:'g' }} bath</del>
-        </p>
-        {% else %}
-        <p>{{ food.price|floatformat:'g' }} bath</p>
-        {% endif %}
+<section class="content-section content-section-single">
+    <div class="content-container">
+        <h2 class="content-title">Menu</h2>
+        <p>Django Test</p>
+        {% if foods.count > 0 %}
+        <div class="grid grid-3">
+            {% for food in foods %}
+            <div>
+                <a href="{% url 'food' food.id %}">
+                    <img class="image" src="{% static food.image %}" alt="">
+                </a>
+                <h5 class="food-title">
+                    <a href="{% url 'food' food.id %}">
+                        {{food.title}}
+                    </a>
+                </h5>
+                {% if food.special_price is not None %}
+                <p>
+                    <span>{{ food.special_price|floatformat:'g' }} bath</span>
+                    <del class="text-g">{{ food.price|floatformat:'g' }} bath</del>
+                </p>
+                {% else %}
+                <p>{{ food.price|floatformat:'g' }} bath</p>
+                {% endif %}
 
-        {% if food.is_premium %}
-        <p>premium</p>
+                {% if food.is_premium %}
+                <p>premium</p>
+                {% endif %}
+                <p>{{ food.promosion_end_at|date:'j N Y' }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p>coming soon</p>
         {% endif %}
-        <p>{{ food.promosion_end_at|date:'j N Y' }}</p>
     </div>
-    {% empty %}
-    <p>coming soon</p>
-    {% endfor %}
-</div>
+</section>
 {% endblock %}

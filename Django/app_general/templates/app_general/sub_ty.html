@@ -5,7 +5,11 @@ Subscription
 {% endblock %}
 
 {% block content %}
-<h2>thanks</h2>
-<p>description...</p>
-<a href="{% url 'home' %}">back to home</a>
+<section class="content-section content-section-single">
+    <div class="content-container content-container-n">
+        <h2 class="content-title">thanks</h2>
+        <p>description...</p>
+        <a class="button button-primary" href="{% url 'home' %}">back to home</a>
+    </div>
+</section>
 {% endblock %}
